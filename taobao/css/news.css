@@ -1,0 +1,134 @@
+/* fix样式 */
+/* news部分 */
+.news {
+  padding-top: 2.8rem;
+}
+.news .fix {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 2.8rem;
+  line-height: 2.8rem;
+  z-index: 30;
+  background: #f8f8f8;
+  border-bottom: 0.02rem solid #999;
+  text-align: center;
+}
+.news .fix .back {
+  width: 1.24rem;
+  height: 1.24rem;
+  border-radius: 50%;
+  margin: 0.8rem 0.4rem;
+  background-image: url(../img/icons/back.png);
+  background-size: 100%;
+}
+.news .fix img {
+  vertical-align: middle;
+  width: 3.68rem;
+  height: 1.08rem;
+  margin-left: -1rem;
+}
+.news .topLine {
+  width: 15rem;
+  background: #f8f8f8;
+}
+.news .topLine h2 {
+  width: 14.6rem;
+  height: 1.6rem;
+  line-height: 1.6rem;
+  padding-left: 0.4rem;
+  background: #fff;
+  color: #da0d15;
+  font-size: 0.68rem;
+  font-weight: bold;
+  border-bottom: 0.1rem solid #da0d15;
+}
+.news .topLine .direct {
+  width: 15rem;
+  background: #fff;
+  border-bottom: 1px solid #f5f5f5;
+}
+.news .topLine .direct a {
+  display: block;
+  width: 14rem;
+  color: #000;
+  padding-top: 0.6rem;
+  margin-left: 0.5rem;
+}
+.news .topLine .direct a h3 {
+  font-size: 0.72rem;
+  font-weight: bold;
+  padding: 0.3rem 0;
+}
+.news .topLine .direct a img {
+  width: 100%;
+  height: 100%;
+  margin: 0.2rem 0;
+}
+.news .topLine .direct a p {
+  font-size: 0.5rem;
+  line-height: 0.7rem;
+}
+.news .topLine .list {
+  background: #fff;
+}
+.news .topLine .list li {
+  width: 14.2rem;
+  height: 3rem;
+  border-bottom: 1px solid #f5f5f5;
+  padding: 0.8rem 0.4rem;
+}
+.news .topLine .list li a {
+  display: inline-block;
+  color: #000;
+}
+.news .topLine .list li a .detail {
+  float: left;
+  width: 8.2rem;
+}
+.news .topLine .list li a .detail h3 {
+  font-size: 0.64rem;
+  font-weight: bold;
+  height: 2.5rem;
+}
+.news .topLine .list li a .detail div {
+  display: -webkit-box;
+}
+.news .topLine .list li a .detail div p {
+  font-size: 0.4rem;
+  -webkit-box-flex: 1;
+}
+.news .topLine .list li a .detail div p i {
+  display: inline-block;
+  width: 0.48rem;
+  height: 0.36rem;
+  margin-right: 0.2rem;
+}
+.news .topLine .list li a .detail div p .visit {
+  background-image: url(../img/icons/attention_fill.png);
+}
+.news .topLine .list li a .detail div p .good {
+  background-image: url(../img/icons/appreciate_fill.png);
+}
+.news .topLine .list li a img {
+  width: 4.6rem;
+  height: 3rem;
+  margin-left: 1.2rem;
+}
+.news .article {
+  padding: 0.6rem;
+}
+.news .article h1 {
+  text-align: center;
+  padding: 0.4rem;
+}
+.news .article p {
+  font-size: 0.7rem;
+  line-height: 0.9rem;
+  padding: 0.2rem;
+}
+.news .article div img {
+  width: 100%;
+}

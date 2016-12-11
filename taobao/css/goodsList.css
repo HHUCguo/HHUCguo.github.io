@@ -1,0 +1,193 @@
+* {
+  font-size: 0.52rem;
+}
+.border-bottom {
+  border-bottom: 0.04rem solid #ddd;
+}
+.background-size {
+  background-size: 100% 100%;
+}
+.search {
+  display: flex;
+  /*Flex布局*/
+  display: -webkit-flex;
+  /* Safari */
+  align-items: center;
+  /*指定垂直居中*/
+  width: 100%;
+  height: 1.8rem;
+  background: #f8f8f8;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-bottom: 0.04rem solid #ddd;
+}
+.search #returnKey {
+  margin-left: 0.56rem;
+  width: 0.8rem;
+  height: 0.8rem;
+  background: url(../img/icons/back.png) no-repeat;
+  background-size: 100% 100%;
+}
+.search .search-frame {
+  margin: 0 0.74rem 0 1rem;
+}
+.search .search-frame input {
+  width: 11rem;
+  height: 1.28rem;
+  background: #e5e5e5;
+}
+.title {
+  position: fixed;
+  top: 1.8rem;
+  left: 0;
+  right: 0;
+  display: box;
+  /*Flex布局*/
+  display: -webkit-box;
+  /* Safari */
+  align-items: center;
+  /*指定垂直居中*/
+  width: 100%;
+  height: 1.58rem;
+  font-size: 0.52rem;
+  background: #fff;
+  border-bottom: 0.04rem solid #ddd;
+}
+.title p {
+  display: block;
+  -webkit-box-flex: 1;
+  text-align: center;
+  line-height: 1.58rem;
+}
+.title p.sort {
+  color: #ff5000;
+}
+.title #form-toggle {
+  display: inline-block;
+  width: 0.8rem;
+  height: 0.8rem;
+  background-image: url(../img/icons/list.png);
+  vertical-align: middle;
+}
+.main-commodity {
+  padding-top: 3.38rem;
+}
+.main-commodity .commodity {
+  width: 100%;
+  height: 5.12rem;
+  margin-top: 0.4rem;
+  border-bottom: 0.04rem solid #ddd;
+}
+.main-commodity .commodity .pic {
+  float: left;
+  width: 5rem;
+  height: 5rem;
+}
+.main-commodity .commodity .pic img {
+  width: 5rem;
+  height: 5rem;
+}
+.main-commodity .commodity .detail {
+  display: inline-block;
+  margin-top: 0.52rem;
+  margin-left: 0.48rem;
+  width: 9.4rem;
+  height: 4.58rem;
+  background: #fff;
+}
+.main-commodity .commodity .detail .commodity-name {
+  height: 1.35rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.main-commodity .commodity .detail div {
+  width: 9.24rem;
+}
+.main-commodity .commodity .detail p {
+  margin-bottom: 0.4rem;
+}
+.main-commodity .commodity .detail p span {
+  margin-right: 0.2rem;
+  width: 1.2rem;
+  height: 0.48rem;
+  line-height: 0.48rem;
+  text-align: center;
+  border-radius: 0.04rem;
+}
+.main-commodity .commodity .detail .deliver-place {
+  color: #a5a5a5;
+}
+.main-commodity .commodity .detail .ad {
+  display: inline-block;
+  font-size: 0.32rem;
+  border: 0.02rem solid #ccc;
+}
+.main-commodity .commodity .detail .postage {
+  display: inline-block;
+  font-size: 0.32rem;
+  border: 0.02rem solid #ff5000;
+  background: #ff5000;
+}
+.main-commodity .commodity .detail .current-price {
+  display: inline-block;
+  color: #ff5000;
+}
+.main-commodity .commodity .detail .num {
+  display: inline-block;
+  color: #a4a4a4;
+  padding-left: 1rem;
+}
+.main-commodity .commodity-items {
+  background: #fff;
+  width: 7.42rem;
+  float: left;
+  border-bottom: 2px solid #d9d9d9;
+  margin-bottom: 0.14rem;
+}
+.main-commodity .commodity-items img {
+  width: 7.42rem;
+  height: 7.42rem;
+}
+.main-commodity .commodity-items .good-title {
+  height: 1.68rem;
+  font-size: 0.52rem;
+  line-height: 0.92rem;
+  color: #333;
+  padding: 0 0.36rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 0.2rem;
+}
+.main-commodity .commodity-items .other {
+  padding-left: 0.3rem;
+}
+.main-commodity .commodity-items .other .ad {
+  display: inline-block;
+  font-size: 0.32rem;
+  border: 0.02rem solid #ccc;
+}
+.main-commodity .commodity-items .other .postage {
+  display: inline-block;
+  font-size: 0.32rem;
+  border: 0.02rem solid #ff5000;
+  background: #ff5000;
+  margin-left: 0.4rem;
+}
+.main-commodity .commodity-items .price {
+  padding: 0.46rem 0.36rem;
+}
+.main-commodity .commodity-items .price span {
+  font-size: 0.32rem;
+  color: #ff5000;
+  float: left;
+}
+.main-commodity .commodity-items .price span em {
+  font-size: 0.6rem;
+}
+.main-commodity .commodity-items .price b {
+  color: #a8a8a8;
+  font-size: 0.4rem;
+  float: right;
+}

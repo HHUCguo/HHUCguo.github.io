@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name='viewport' content="width=device-width,initial-scale=1,user-scalable=no">
+    <title>淘宝-购物车</title>
+    <link rel="stylesheet" href="css/reset1.css">
+    <link rel="stylesheet" href="css/shoppdingTrolley.css">
+</head>
+<body> 
+   <div id="demo">
+        <!-- 头部-购物车标题 -->
+    <div class="title clear">
+        <p id="goIndex">首页</p>
+        <p>购物车(<span>{{sum}}</span>)</p>
+        <p id='edit-all' v-on:touchend='editAll' v-html='editKey?"完成":"编辑"'>{{editAllText}}</p>
+    </div>
+    <!-- 内容-详细商品 -->
+    <div id='main-commodity'>
+        <!-- 单个商品 -->
+            <div class='commodity' v-for='(aMes,index) in data'>
+                <div class='commodity-head clear'>
+                    <div>
+                        <span class='select' v-show='!aMes.checked' @touchend='aMes.checked=!aMes.checked'></span>
+                        <span class='select-check' v-show='aMes.checked' @touchend='aMes.checked=!aMes.checked'></span>
+                    </div>
+                    <span class='icon-1'></span>
+                    <div class='commodity-name'><a href="javascript:;">{{aMes.shopName}}</a></div>
+                    <span class='icon-2'></span>
+                    <div ><span class='edit' v-on:touchend='aMes.editonoff=!aMes.editonoff' v-html='aMes.editonoff?"完成":"编辑"'></span></div>
+                    </div>
+                <div class="commodity-content">
+                    <div class='select' v-show='!aMes.checked' @touchend='aMes.checked=!aMes.checked'></div>
+                    <div class='select-check' v-show='aMes.checked' @touchend='aMes.checked=!aMes.checked' ></div>
+                    <!-- 商品图片 -->
+                    <img class='pic' v-bind:src="aMes.goodImgUrl" alt="pic">
+                    <div class='detailtemp' v-show='!aMes.editonoff'>
+                    <div class='detail'>
+                        <span class='describe'><a href="javascript:;" > {{aMes.commodityName}}</a></span>
+                        <!-- 衣服 -->
+                        <p class='model' v-if='aMes.type=="clothes"'><span>颜色分类:</span><span>{{aMes.color}}</span>;<span>尺码标签:</span><span>{{aMes.size}}</span></p>
+                        <!-- 食物 -->
+                        <p class='model' v-if='aMes.type=="food"'><span>口味：</span><span>{{aMes.taste}}</span></p>
+                        <!-- 美妆 -->
+                        <p class='model' v-if='aMes.type=="beauty"'><span>化妆品净含量:</span><span>{{aMes.volume}}</span></p>
+                        <!-- 箱包 -->
+                        <p class='model' v-if='aMes.type=="bags"'><span>颜色:</span><span>{{aMes.color}}</span></p>
+                        <!-- 书籍 -->
+                        <p class='model' v-if='aMes.type=="books"'>
+                        <span>出版社:</span><span>{{aMes.place}}</span>;
+                        </p>
+                        <!-- 是否有原价 -->
+                        <p class='price unit-price'><span>￥{{aMes.unitPrice}}</span></p>
+
+                        <p class='price origin-price'  v-if='aMes.originalPrice'><span>￥{{aMes.originalPrice}}</span></p>
+                        <!-- 数量 -->
+                        <p class="count">x<span>{{aMes.count}}</span></p>
+                    </div>
+                    </div>
+                    <div class='onedittemp' v-show='aMes.editonoff'>
+                        <div class='onedit' >
+                            <span class='amount-left' v-on:touchend='deleteNum(aMes)'>-</span>
+                            <span class='count'>{{aMes.count}}</span>
+                            <span class='amount-right'v-on:touchend='addNum(aMes)' >+</span>
+                            <div class='delete' @touchend='deleteGood(index)'>删除</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <!-- 是否删除提示框 -->
+    <div id='shade'></div>
+    <div id='judgeDelete'>
+        <p>确认要删除商品吗?</p>
+        <div>
+            <button id='cancel' v-on:touchend='cancel'>取消</button>
+            <button id='confirm' v-on:touchend='confirm'>确定</button>
+        </div>
+    </div>
+    <!-- 商品数量超出范围提示框-->
+    <div id='numOverflow'>
+        <div id='minOverflow'>受不鸟了，不能再少了哦！</div>
+        <div id='maxOverflow'>只能购买这么多件哦！</div>
+    </div>
+    <!-- 结算-支付功能 -->
+    <div id='payment'>
+        <div class='select' v-show='!checkonoff' @touchend='checkedAll'  ></div>
+        <div class='select-check' v-show='checkonoff' @touchend='checkedAll'></div>
+        <p>全选</p>
+        <p id='sum'>合计:<span>￥{{totalPrice}}</span></p>
+        <p class='freight'>不含运费</p>
+        <input type="submit" value="结算">
+    </div>
+   </div>
+       <script src='js/vue.js'></script>
+    <script src='data/detail.js'></script>
+   <script src='js/common.js'></script>
+    <script src='js/shoppdingTrolley.js'></script>
+   
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>某宝-detail</title>
+	<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0"/>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/detail.css">
+</head>
+<body>
+	<!-- detail页面整体 -->
+	<div id="detail">
+		<!-- 顶部固定部分 -->
+		<header class="fix clearfix">
+			<span class="fl"><i class="back icons"></i></span><!-- 返回按钮 -->
+			<span class="fr"><i class="cart icons"></i></span><!-- 购物车：添加到购物车，会显示数量，用i表示 -->
+		</header>
+		<!-- 图片轮播 -->
+		<div class="carousel">
+			<ul class="clearfix" style="width: 1000000px">
+				<!-- <li><img src="img/detail/1.jpg"></li> -->
+			</ul>
+			<div class="dot">
+				<span class="active"></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+		<!-- 商品详细信息部分 -->
+		<div class="info">
+			<h3>一幅幅衣服一幅幅衣服方芳芳发一幅幅</h3>
+			<span>￥<i id="price">255-455</i></span>
+			<p class="clearfix">
+				<em class="fl">快递:<i>免邮</i></em>
+				<em class="fl">月销量<i id="sales">230</i>笔</em>
+				<em class="fr" id="address">北京</em>
+			</p>
+
+			<p>
+				<em><i class="icons"></i>七天无理由</em>
+				<em><i class="icons"></i>蚂蚁花呗</em>
+				<em><i class="icons"></i>信用卡</em>
+				<em><i class="icons"></i>集分宝</em>
+			</p>
+
+			<p>
+				<span id="chooseBtn">请选择颜色分类</span>
+			</p>
+			<!-- <div class="drag">继续拖动，查看图文详情</div> -->
+		</div>
+	</div>
+	<!-- 图文详情部分 -->
+	<div id="imgDetail">
+		<div>
+			<h3 class="active">图文详情</h3>
+			<h3>产品参数</h3>
+		</div>
+		<ul class="pics" id="pics"><!-- 
+			<li><img src="img/detail/IMG_1231.JPG"></li>
+			<li><img src="img/detail/3.jpg"></li>
+			<li><img src="img/detail/1.jpg"></li> -->
+		</ul>
+		<ul class="parameter" id="parameter"  style="display: none;">
+			<li>
+				<span class="title">风格</span>
+				<span class="desc">通勤</span>
+			</li>
+		</ul>
+	</div>
+	<!-- 弹出框显示 -->
+	<div id="msg">
+		<i id="close">x</i>
+		<div class="img-msg">
+			<img src="">
+		</div>
+		<div class="desc-msg fl">
+			<h4>冬装新品价￥<i>59</i></h4>
+			<p>有货</p>
+			<p>请选择 尺码 颜色分类</p>
+		</div>
+
+		<div class="choose">
+			<ul>
+				<li class="size">
+					<h5>尺码</h5>
+					<div>
+						<span>M</span>
+						<span>L</span>
+						<span>XL</span>
+					</div>
+				</li>
+				<li>
+					<h5 class="color">颜色分类</h5>
+					<div>
+						<span>白色</span>
+						<span>黑色</span>
+						<span>灰色</span>
+					</div>
+				</li>
+				<li class="num">
+					<h5>购买数量</h5>
+					<div>
+						<span>-</span>
+						<span>1</span>
+						<span>+</span>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="btn">加入购物车</div>
+	</div>
+	<script type="text/javascript" src="data/detail.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript" src="js/detailScript.js"></script>
+</body>
+</html>

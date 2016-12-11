@@ -1,0 +1,331 @@
+#detail {
+  width: 100%;
+  height: 6.4rem;
+}
+/* fix样式 */
+.fix {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 2.8rem;
+  line-height: 2.8rem;
+  background: rgba(255, 255, 255, 0.4);
+  z-index: 30;
+}
+.fix span {
+  width: 1.28rem;
+  height: 1.28rem;
+  border-radius: 50%;
+  margin: 0.8rem 0.4rem;
+  background-color: #7e7c7c;
+  line-height: 1.28rem;
+  text-align: center;
+}
+.fix span i {
+  display: inline-block;
+  width: 0.8rem;
+  height: 0.8rem;
+  vertical-align: middle;
+}
+.fix span .back {
+  background-image: url(../img/icons/back1.png);
+}
+.fix span .cart {
+  background-image: url(../img/icons/cart1.png);
+}
+.fix.active {
+  background: #ffffff;
+}
+.fix.active span {
+  background-color: white;
+}
+.fix.active span .back {
+  background-image: url(../img/icons/back.png);
+}
+.fix.active span .cart {
+  background-image: url(../img/icons/cart.png);
+}
+/* 轮播图部分 */
+.wh {
+  width: 15rem;
+  height: 15rem;
+}
+.carousel {
+  position: absolute;
+  width: 15rem;
+  height: 15rem;
+  z-index: 1;
+  overflow: hidden;
+}
+.carousel ul {
+  position: absolute;
+  left: 0;
+  width: 75rem;
+}
+.carousel ul li {
+  float: left;
+  width: 15rem;
+  height: 15rem;
+  background: #faa;
+}
+.carousel ul img {
+  width: 15rem;
+  height: 15rem;
+}
+.carousel .dot {
+  position: absolute;
+  bottom: 0.8rem;
+  width: 15rem;
+  text-align: center;
+}
+.carousel .dot span {
+  display: inline-block;
+  width: 0.28rem;
+  height: 0.28rem;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+}
+.carousel .dot span.active {
+  background: #ff6600;
+}
+/* 商品信息 */
+.info {
+  position: absolute;
+  top: 15rem;
+  z-index: 20;
+}
+.info h3 {
+  height: 1.8rem;
+  line-height: 1.8rem;
+  font-size: 0.56rem;
+  color: #000;
+  padding-left: 0.4rem;
+  overflow: hidden;
+}
+.info span {
+  display: block;
+  line-height: 1.1rem;
+  font-size: 0.68rem;
+  padding-left: 0.4rem;
+  color: #ff6600;
+  font-family: "微软雅黑";
+}
+.info p:nth-of-type(1) {
+  width: 15rem;
+  height: 1.4rem;
+  line-height: 1.4rem;
+  color: #999;
+}
+.info p:nth-of-type(1) em:nth-of-type(1) {
+  margin-left: 0.4rem;
+}
+.info p:nth-of-type(1) em:nth-of-type(2) {
+  margin-left: 3.2rem;
+}
+.info p:nth-of-type(1) em:nth-of-type(3) {
+  margin-right: 0.4rem;
+}
+.info p:nth-of-type(2) {
+  display: -webkit-box;
+  height: 1.6rem;
+  line-height: 1.6rem;
+  text-align: center;
+  font-size: 0.44rem;
+  background: #f8f8f8;
+}
+.info p:nth-of-type(2) em {
+  display: block;
+  -webkit-box-flex: 1;
+  color: #666;
+}
+.info p:nth-of-type(2) em i {
+  display: inline-block;
+  width: 0.52rem;
+  height: 0.52rem;
+  background-image: url(../img/icons/round_check.png);
+  vertical-align: text-bottom;
+  margin-right: 0.2rem;
+}
+.info p:nth-of-type(3) {
+  width: 15rem;
+  height: 2.2rem;
+  background: #eee;
+  padding: 0.4rem 0;
+}
+.info p:nth-of-type(3) span {
+  display: block;
+  height: 2.2rem;
+  line-height: 2.2rem;
+  background: #fff;
+}
+/* drag：继续拖动，显示详情 */
+/* 图文详情部分 */
+#imgDetail {
+  position: relative;
+  top: 17.8rem;
+  width: 15rem;
+  height: 10rem;
+}
+#imgDetail h3 {
+  width: 7.5rem;
+  height: 2.2rem;
+  line-height: 2.2rem;
+  text-align: center;
+  font-size: 0.64rem;
+  color: #666;
+  float: left;
+}
+#imgDetail h3.active {
+  color: #ff6600;
+  border-bottom: 3px solid #ff6600;
+}
+#imgDetail ul.pics li {
+  width: 15rem;
+  height: 15rem;
+  overflow: hidden;
+}
+#imgDetail ul.pics li img {
+  width: 15rem;
+  height: 15rem;
+}
+#imgDetail ul.parameter {
+  width: 15rem;
+  height: 15rem;
+  margin-bottom: 0.6rem;
+}
+#imgDetail ul.parameter li {
+  width: 13.8rem;
+  height: 1.8rem;
+  margin-left: 0.4rem;
+  line-height: 1.8rem;
+  border-bottom: 0.02rem solid #e7e7e7;
+  font-size: 0.48rem;
+  padding-left: 0.4rem;
+  overflow: hidden;
+}
+#imgDetail ul.parameter li span {
+  display: inline-block;
+  text-align: left;
+}
+#imgDetail ul.parameter li span.title {
+  width: 4rem;
+  color: #666;
+}
+#imgDetail ul.parameter li span.desc {
+  width: 9rem;
+  margin-left: 0.4rem;
+  color: #003333;
+}
+#msg {
+  position: fixed;
+  bottom: -20rem;
+  z-index: 1000;
+  width: 14.2rem;
+  background: #fff;
+  box-shadow: 0 0 0.2rem #666666;
+  padding: 0 0.4rem;
+}
+#msg i#close {
+  display: block;
+  position: absolute;
+  right: 0.4rem;
+  top: 0.4rem;
+  font-size: 0.8rem;
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 50%;
+  border: 0.02rem solid #cccccc;
+  text-align: center;
+  line-height: 0.8rem;
+}
+#msg .img-msg {
+  position: relative;
+  top: -0.9rem;
+  z-index: 2000;
+  width: 4.76rem;
+  height: 4.76rem;
+  border-radius: 0.1rem;
+  border: 0.02rem solid #cccccc;
+  background: #fff;
+}
+#msg .img-msg img {
+  width: 4.6rem;
+  height: 4.6rem;
+  margin: 0.08rem;
+}
+#msg .desc-msg {
+  margin-top: -3.6rem;
+  margin-left: 6rem;
+}
+#msg .desc-msg h4 {
+  font-size: 0.64rem;
+  color: #ff7739;
+  margin-bottom: 0.2rem;
+}
+#msg .desc-msg p {
+  line-height: 0.76rem;
+  font-size: 0.56rem;
+  font-family: "微软雅黑";
+}
+#msg .choose li {
+  width: 100%;
+  height: 3.2rem;
+  border-top: 0.02rem solid #dddddd;
+  font-family: "微软雅黑";
+}
+#msg .choose li h5 {
+  font-size: 0.48rem;
+  margin: 0.48rem 0;
+}
+#msg .choose li div span {
+  display: inline-block;
+  height: 1.1rem;
+  line-height: 1.1rem;
+  padding: 0 0.3rem;
+  border-radius: 0.2rem;
+  background: #f5f5f5;
+  margin-right: 0.6rem;
+}
+#msg .choose li div span.active {
+  color: #fff;
+  background: #ff7739;
+}
+#msg .choose li:last-of-type {
+  border-bottom: 0.02rem solid #dddddd;
+  line-height: 3.2rem;
+}
+#msg .choose li:last-of-type h5 {
+  float: left;
+  width: 2.4rem;
+  height: 1.1rem;
+  margin-top: -0.1rem;
+}
+#msg .choose li:last-of-type div {
+  float: right;
+}
+#msg .choose li:last-of-type div span {
+  display: inline-block;
+  width: 1.3rem;
+  height: 1.1rem;
+  border-radius: none;
+  text-align: center;
+  background: #f5f5f5;
+  margin: 0.02rem;
+}
+#msg .btn {
+  width: 15rem;
+  height: 2rem;
+  color: #fff;
+  text-align: center;
+  line-height: 2rem;
+  margin-top: 2rem;
+  margin-left: -0.4rem;
+  background: #ff9402;
+  font-size: 0.68rem;
+}
+#msg.active {
+  bottom: 0rem;
+  transition: 0.5s ease-in;
+  -webkit-transition: 0.5s ease-in;
+}

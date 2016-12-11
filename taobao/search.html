@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name='viewport' content="width=device-width,initial-scale=1,user-scalable=no">
+	<title>淘宝-搜索页</title>
+	<link rel="stylesheet" href="css/search.css">
+	<link rel="stylesheet" href="css/reset.css">
+</head>
+<body>
+	<!-- 搜索头 -->
+	<div id='main'>
+	<div id='title'>
+		<div id='search-frame'>
+			<div><p>宝贝</p></div>
+			<div>
+				<input type="text" placeholder="请输入内容" class='header-search-input' autocomplete="off" @input="inquiry" v-model='text'/>
+			</div>
+			<!-- <div><span></span></div> -->
+		</div>
+		<div id='search-btn'>搜索</div>
+	</div>
+	<!-- 主内容 -->
+	<div id='content'>
+		<!-- 历史纪录 -->
+		<div id='contentOff' v-show="text==''">
+			<div id='history'>
+				<div><p>历史搜索</p><div class='deleteIcon' @touchend='historyonoff=false'></div></div>
+				<div style='width:100%'v-show='historyonoff'>
+				<span class='historical-data'>女靴</span>
+				<span class='historical-data'>包包女</span>
+				<span class='historical-data'>高领毛衣 宽松</span>
+				<span class='historical-data'>羊毛衫 杉杉</span>
+				<span class='historical-data'>闪存64G</span>
+				<span class='historical-data'>机械键盘进口</span>
+				<span class='historical-data'>中华上下五千年[上下册]正版当天发货</span>
+				<span class='historical-data'>芙丽芳丝洁面乳300ml</span>
+				<span class='historical-data'>美宝莲眼线笔 专柜</span>
+				<span class='historical-data'>秋季新款女装韩版进口面料真丝衬衫</span>
+				<span class='historical-data'>优衣库呢大衣 男</span>
+				<span class='historical-data'>男靴</span>
+				<span class='historical-data'>画册精装</span>
+				<span class='historical-data'>书籍</span>
+				</div>
+			</div>
+			<!-- 搜索发现 -->
+			<div id='searchFind'>
+				<div><p>搜索发现</p><div class='searchAttention' @touchend='searchFindonoff=!searchFindonoff'></div></div>
+					<div style='width:100%' v-show='searchFindonoff'>
+					<span class='historical-data'>SKII化妆水</span>
+					<span class='historical-data'>男装</span>
+					<span class='historical-data'>男靴</span>
+					<span class='historical-data'>棉衣</span>
+					<span class='historical-data'>书籍</span>
+					<span class='historical-data'>眉笔</span>
+					<span class='historical-data'>背包</span>
+					<span class='historical-data'>html5指南</span>
+					</div>
+			</div>
+		</div>
+		<div id='contentOn' v-show="text!=''">
+			<div id='searchContent'>
+	            <ul id='searchList'>
+	            <li v-for='mes in inquiryMes' @touchend='substituteMes(mes)' v-html='mes'></li>
+	            </ul>
+            </div>
+		</div>
+	</div>
+	</div>
+	<script src='js/common.js'></script>
+	<script src='js/vue.js'></script>
+	<script src='js/search.js'></script>
+	<script>
+		var searchBtn = document.getElementById('search-btn');
+		jump(searchBtn,'goodsList.html#0');
+	</script>
+</body>
+</html>
