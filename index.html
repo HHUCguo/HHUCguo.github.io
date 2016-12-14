@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="style.css" rel="stylesheet">
+</head>
+<body>
+<div  id="box">
+	<div id="nav">
+		<div class="active"></div>
+		<div></div>
+		<div></div>
+    	</div>
+	<div class="contains">
+	    	<div class="page">
+	    	<div class="go-page"><a href="https://hhucguo.github.io/%E7%94%BB%E5%BB%8A%E5%B9%BB%E7%81%AF%E7%89%87/">点我看看</a></div>
+	    		<h2  style="top: 75%;left: 60%;">图片幻灯片</h2>
+			<p class="intro">
+				作品效果：</br>1、双击分散状态下的单张图片，所有图片拼接成当前点击的图片；</br>2、双击拼接状态的图片，图片分散排列；</br>3、可以选择图片分散排列和整齐排列两种方式；</br>4、鼠标移动到图片上，图片摆正，并有过渡效果；</br>5、图片弹起撞击效果；</br>6、拼接状态的图片可以切换上下张，有三种随机出现的切换效果。
+			</p>
+			<p class="diff" style="top: 80%">实现技术：</br>原生javascript+css3
+			</p>
+			<div class="photo"  style="top:80px;">
+				<img src="index/img/photo.png" alt="">
+			</div>
+	    	</div>
+	    	<div class="page">
+	    		<div class="go-page"><a href="https://hhucguo.github.io/taobao/">点我看看</a></div>
+	    		<h2>仿淘宝页面·9.9包邮版</h2>
+	    		<p class="intro">作品效果：</br>1、淘宝移动端静态页面，包括首页、商品列表页、商品详情页、搜索页、购物车、淘宝头条页面等；</br>2、页面交互效果，包括图片轮播、头条滚动、页面跳转(hash)等；</br>3、购物车页面使用vue.js实现；</br>4、添加到购物车的数据采用localStorage存储</p>
+			<p class="diff">实现技术：</br>rem布局，localSrorage，SASS，LESS，原生javascript</br>实现难点：</br>1、数据结构定义</br>2、vuejs实现购物车页面数据交互</br>3、一些交互效果</p>
+			<div class="photo">
+				<img src="index/img/tao.png" alt="">
+			</div>
+	    	</div>
+	    	<div class="page">
+	    		<div class="go-page"><a href="">点我看看</a></div>
+	    		<h2>音乐播放器</h2>
+	    		<p class="intro">作品效果：</br>上下首切换、暂停续播、歌词同步显示、频谱图等功能</p>
+			<p class="diff">实现技术：</br>原生javascript+css3</p>
+			<div class="photo">
+				<img src="http://placehold.it/500/b39ddb.png/fff?text=建设中...">
+			</div>
+	    	</div>
+	</div>
+</div>
+<script>
+
+	window.onload=function(){
+	  	window.scrollTo(0,0);//滚动到顶部
+	 }
+	var box = document.getElementById('box');
+	var pages = box.getElementsByClassName('page');
+	var nav = document.getElementById('nav');
+	var ind = nav.getElementsByTagName('div');
+	var pageHeight = pages[0].offsetHeight;
+	// console.log(pages[0].offsetHeight);
+	// console.log(pages.length);
+	document.body.style.height = pageHeight*pages.length+'px';  //设置body高度，使页面出现滚动条
+
+	//滚动条滚动时触发事件
+	window.onscroll = function(){
+		console.log(window.pageYOffset)
+		var scrollHeight = window.pageYOffset;
+		
+		for(let i = 0;i<pages.length;i++){
+
+			if(scrollHeight>=pageHeight*i && scrollHeight<=pageHeight*(i+1)){
+				for(var j = 0;j<pages.length;j++){
+					pages[j].style.display = 'block';
+					pages[j].style.height = pageHeight+'px';
+				}
+				if(i>0){
+					for(var k = 0;k<i;k++){
+						pages[k].style.display = 'none';
+					}
+				}
+				pages[i].style.height = (pageHeight - (scrollHeight-pageHeight*i))+'px';
+			}
+			if(scrollHeight>=pageHeight*i+pageHeight/2){
+				for(var a = 0;a<pages.length;a++){
+					ind[a].className = '';
+				}
+				ind[i+1].className = 'active';
+			}
+			if(scrollHeight<pageHeight/2){
+				for(var a = 0;a<pages.length;a++){
+					ind[a].className = '';
+				}
+				ind[0].className = 'active';
+			}	
+		}
+	}
+
+</script>
+</body>
+</html>
