@@ -3,7 +3,6 @@
  * @authors Your Name (you@example.org)
  * @date    2017-01-05 14:50:54
  * @version $Id$
- * 大鱼
  */
 
 var momObj = function(){

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<style type="text/css">
+p{
+	font-size: 30px;
+	color: #000;	
+}
+</style>
+</head>
+<body>
+<p id="text">1234</p>
+<script type="text/javascript">
+var a = document.getElementById('text');
+	numAdd(a);
+	function numAdd(obj,target,speed,totalTime){
+		var obj = obj || "";
+		var newNum = 0;
+		var num = 0;
+		if(obj == ""){
+			return false;
+		}
+		var data = {
+			target:target || 123456789,
+			speed:speed || 50,
+			total:totalTime || 2500
+		}
+
+		var per = Math.ceil(data.target/data.speed);  //每次更新的数量
+
+		var timer = setInterval(add,data.total/data.speed);
+
+		function add(){
+			newNum += per; 
+			num++;
+			if(num>=data.speed){
+				clearInterval(timer);
+				if(newNum > data.target){
+					newNum = data.target;
+				}
+			}
+
+			obj.innerHTML = newNum;
+		}
+		
+	}
+</script>
+</body>
+</html>

@@ -32,9 +32,6 @@ var baby;//小鱼
 var mx;
 var my;//定义鼠标位置，大鱼随着鼠标移动
 
-var babyTail = [ ];
-var babyEye = [ ];  //眨眼睛
-
 document.body.onload = game;  //body加载完毕将game作为入口执行
 function game(){
 	init();
@@ -79,18 +76,6 @@ function init(){
 	//初始化小鱼
 	baby = new babyObj();
 	baby.init();
-
-	//初始化小鱼尾吧的图片数组
-	for(var i = 0;i<8;i++){
-		babyTail[i] = new Image();
-		babyTail[i].src = "./src/babyTail"+ i +".png";
-	}
-
-	//初始化小鱼眨眼睛的图片数组
-	for(var i = 0;i<2;i++){
-		babyEye[i] = new Image();
-		babyEye[i].src = "./src/babyEye"+ i +"png";
-	}
 }
 
 function gameloop(){
