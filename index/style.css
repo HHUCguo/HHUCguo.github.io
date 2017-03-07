@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * 
  * @authors Your Name (you@example.org)
@@ -6,16 +7,22 @@
  */
 body {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  font-family: "微软雅黑"; }
 
 img {
   vertical-align: top; }
+
+p {
+  margin: 0;
+  padding: 0; }
 
 #box {
   width: 700px;
   height: 640px;
   margin: 20px auto;
-  border: 1px solid #ef2a82; }
+  border: 1px solid #ef2a82;
+  position: relative; }
   #box div {
     float: left; }
   #box div#list {
@@ -33,5 +40,16 @@ img {
       margin-bottom: 10px; }
   #box div#pages {
     width: 340px; }
+  #box #intro {
+    width: 240px;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none; }
+    #box #intro h2 {
+      margin: 10px 5px 5px 5px; }
+    #box #intro p {
+      line-height: 20px; }
 
 /*# sourceMappingURL=style.css.map */

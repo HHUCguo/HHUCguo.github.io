@@ -8,22 +8,27 @@
 body{
 	margin: 0;
 	padding: 0;
+	font-family: "微软雅黑";
 }
 img{
 	vertical-align: top;
 
+}
+p{
+	margin: 0;
+	padding: 0;
 }
 #box{
 	width: 700px;
 	height: 640px;
 	margin: 20px auto;
 	border: 1px solid #ef2a82;
+	position: relative;
 	div{
 		float: left;
 	}
 	div#list{
 		width: 340px;
-		// border: 1px solid black;
 		box-sizing:border-box;
 		a{
 			display: block;
@@ -40,5 +45,21 @@ img{
 	}
 	div#pages{
 		width: 340px;	
+	}
+	#intro{
+		width: 240px;
+		padding: 10px;
+		// text-indent: 2em;
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: none;
+		h2{
+			margin: 10px 5px 5px 5px;
+		}
+		p{
+			line-height: 20px;
+
+		}
 	}	
 }
