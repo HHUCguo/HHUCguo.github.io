@@ -1,0 +1,100 @@
+@charset "utf-8";
+/*CSS reset*/
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, dialog, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video { margin: 0; padding: 0 }
+article, aside, dialog, figure, footer, header, hgroup, nav, section { display: block }
+table {border-collapse:collapse;border-spacing:0;}
+img { vertical-align: top;/*max-width: 100%; 图片（非背景图）自适应屏幕大小*/}
+fieldset,img ,input{border:0}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;}/*font-weight:normal*/
+ul,ol,li,dd,dt { list-style: none;}
+caption,th {text-align:left}
+abbr,dfn { border-bottom: 1px dotted #777; cursor: help; }
+blockquote, q { quotes: none }
+h1,h2,h3,h4,h5,h6 {font-size:100%;font-weight:normal}
+q:before,q:after {content:''}
+abbr,acronym { border:0}
+a {text-decoration: none;}
+a:focus {outline: thin dotted #333;outline: 5px auto -webkit-focus-ring-color;outline-offset: -2px;}
+a:hover,a:active {outline: 0;}
+select, input, textarea, button { vertical-align: middle; z-index: 2; margin:0;padding: 0;}
+input[type="radio"], input[type="checkbox"] { margin: -2px 0 1px; }
+
+body { font: 14px/1.8 Tahoma, Helvetica,'Microsoft YaHei', Arial, "\5b8b\4f53", sans-serif; }
+
+.wid100{ width: 100%}
+/*文字排版*/
+.f12{font-size:12px}
+.fb{font-weight:bold}
+.fn{font-weight:normal}
+.t2{text-indent:2em}
+.lh150{line-height:150%}
+.lh180{line-height:180%}
+.lh200{line-height:200%}
+.unl{text-decoration:underline;}
+.no_unl{text-decoration:none;}
+.st{ font-family:"宋体";}
+.yh{ font-family:"微软雅黑";}
+.fz{ font-family:"方正兰亭黑简体","微软雅黑";}
+.fzGBK{font-family:"方正兰亭黑简体";}
+/*定位*/
+.tl{text-align:left}
+.ti2{text-indent:2em;}
+.tc{text-align:center}
+.tr{text-align:right}
+.bc{margin-left:auto;margin-right:auto;}
+.fl{float:left;display:inline}
+.fr{float:right;display:inline}
+
+.clear{ height: 0; line-height: 0; font-size: 0; clear: both;}
+.cl{clear:left}
+.cr{clear:right}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+.clearfix{display:inline-block}* html .clearfix{height:1%}.clearfix{display:block}
+.vm{vertical-align:middle}
+
+.hidden{visibility:hidden}
+.none{display:none}
+/*长度高度*/
+.w{width:100%}
+.h{height:100%}
+/*边距*/
+.m10{margin:10px}
+.p10{padding:10px;}
+.hid{ overflow:hidden}
+
+/* table */
+table { border: 1px solid #d7d7d7; width: 100%;}
+
+table td,table th {
+    padding: 9px;
+    color:#666;
+}
+
+table td{ font-size: 12px; text-align: center;}
+
+/* form */
+button{border-radius: 7px; border: none; font-weight: bold; color: #fff;}
+button:hover{ cursor: pointer; }
+input[type="submit"],
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="password"],
+input[type="number"],
+input[type="url"],
+input[type="tel"]
+{
+    line-height: 20px;
+    padding: 4px 6px;
+    border:1px solid #d7d7d7;
+    vertical-align: middle;
+    font-size: 14px;
+}
+select {
+    height: 30px;
+    border:1px solid #d7d7d7;
+    font-size: 14px;
+    padding-left: 6px;
+    vertical-align: middle;
+}
+textarea{border:1px solid #d7d7d7; height: 94px;width: 75%;line-height:2.8em;text-indent: 2em;color: #ccc; font-size: 12px;}

@@ -1,0 +1,150 @@
+.left-part{
+	position: absolute;
+	top:50px;
+	left: 0;
+	bottom: 0;
+	width: 210px;
+	.left-part-bg{
+		border-right: #c6c8cc 1px solid;
+		background-color:  #f0f0f0 ;
+		height: 100%;
+		.items{
+			padding-top: 10px;
+			li{
+				margin: 3px 0;
+				a{
+					display: block;
+					height: 35px;
+					line-height: 35px;
+					&:hover,&.active{
+						background:#c6c8cc;
+						i.all-file{
+							background-position: -23px 0;
+						}
+						i.pic{
+							background-position: -23px -22px;
+						}
+						i.docu{
+							background-position: -23px -44px;
+						}
+						i.movie{
+							background-position: -23px -88px;
+						}
+						i.bt{
+							background-position: -23px -200px;
+						}
+						i.music{
+							background-position: -23px -65px;
+						}
+						i.other{
+							background-position: -23px -176px;
+						}
+						i.share{
+							background-position: -23px -130px;
+						}
+						i.del{
+							background-position: -23px -152px;
+						}
+					}
+					i{	
+						height: 22px;
+						width: 22px;
+						background-image: url(../images/navigator_3e99a34.png);
+						margin:0 10px 0 25px;
+						
+						&.pic{
+							background-position: 0 -22px;
+						}
+						&.docu{
+							background-position: 0 -44px;
+						}
+						&.movie{
+							background-position: 0 -88px;
+						}
+						&.bt{
+							background-position: 0 -200px;
+						}
+						&.music{
+							background-position: 0 -65px;
+						}
+						&.other{
+							background-position: 0 -176px;
+						}
+						&.share{
+							background-position: 0 -130px;
+						}
+						&.del{
+							background-position: 0 -152px;
+						}
+					}
+					span{
+						color: black;
+					}
+				}
+				
+			}
+		}
+		.phone{
+			// border: 1px solid blue;
+			padding: 15px 0 0 10px;
+
+			a{
+				display: inline-block;
+				height: 50px;
+				width: 45px;
+				color: red;
+				text-align: center;
+				font-size: 12px;
+				    color: #656565;
+				span{
+					display: block;
+					height: 25px;
+					width: 35px;
+					background-image: url(../images/category_341e0a6.png);
+					background-repeat: no-repeat;
+					
+				}
+				&:nth-child(1) span{
+					background-position: -126px -100px;
+				}
+				&:nth-child(2) span{
+					background-position: -60px -68px;
+				}
+				&:nth-child(3) span{
+					background-position: 10px -100px;
+				}
+				&:nth-child(4) span{
+					background-position: -196px -67px;
+				}
+			}
+		}
+		.gb{
+			// border: 1px solid red;
+			width: 100%;
+			.gb-box{
+				padding: 0 20px;
+				// border: 1px solid black;
+				#step{
+				
+					height: 5px;
+					background-color: #c6cfda;
+					margin: 0 auto;
+					span{
+						display: block;
+						width: 30px;
+						height: 100%;
+						background-color: #74c709;
+					}
+				}
+				#data{
+					font-size: 12px;
+					color: #979797;
+				}
+				a{
+					float: right;
+					color: #3c88d5;
+				}
+			}
+		}
+	}	
+	}

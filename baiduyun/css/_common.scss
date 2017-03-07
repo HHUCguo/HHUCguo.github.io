@@ -1,0 +1,28 @@
+#file-box{
+	position: absolute;
+	background: deepskyblue;
+	opacity: 0.3;
+	display: none;
+}
+#file-menu,#doc-menu{
+	background: white;
+	width: 100px;
+	margin:0;
+	padding:0;
+	list-style: none;
+	border:1px solid #000;
+	position: absolute;
+	left:0;
+	top:0;
+	z-index: 10;
+	display: none;
+	li{
+		
+		border-bottom:1px solid #000 ;
+		text-align: center;
+		&:hover{
+			background: red;
+			color:#fff;
+		}
+	}
+}

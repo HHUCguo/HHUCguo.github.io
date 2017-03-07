@@ -1,0 +1,61 @@
+	#header{
+		height: 50px;
+		width: auto;
+		background-color: black;
+		padding-left: 10px;
+		.logo{
+			display: inline-block;
+			height:40px;
+			width: 120px; 
+			background: url(../images/frame-icon.png) 0 0 no-repeat;
+			float: left;
+			margin: 5px 15px 0 0;
+		}
+		.item-left{
+			float: left;
+			li{
+				float: left;
+				a{
+					display: inline-block;
+					color: white;
+					height: 48px;
+					width: 90px;
+					text-align: center;
+					line-height: 48px;
+					font-size: 20px;
+					&:hover,&.active{
+						background-color: #252525;
+					}
+				}
+			}
+		}
+		.vip{
+			float: right;
+			color: red;
+			line-height: 50px;
+		}
+
+		.item-right{
+			float: right;
+			li{
+				display: inline-block;
+				margin: 10px 0;
+				a{
+					padding: 0 10px;
+				 	margin: 10px 0;
+				 	border-left: 1px solid white
+				}
+			}
+			.search{
+				position: relative;
+				vertical-align: middle;
+				margin: 0 10px;
+				form{
+					float: left;
+					input{
+						float: left;
+					}
+				}
+			}
+		}
+	}

@@ -1,0 +1,272 @@
+@charset "UTF-8";
+@import "_header.scss";
+@import "_leftPart.scss";
+@import "_common.scss";
+body{
+	overflow: hidden;
+}
+a{
+	color: #666;
+}
+.file-small{
+	height: 50px;
+	width: 50px;
+	opacity: .5;
+	// background: red;
+	position: absolute;
+	z-index: 100;
+	background-image: url(../images/file.png);
+	background-repeat:no-repeat;
+	background-size: 100%;
+	display: none;
+	span{
+		position: absolute;
+		top: 30px;
+		left: 30px;
+		display: block;
+		height: 20px;
+		width: 20px;
+		line-height: 20px;
+		text-align: center;
+		color: #2a7dd9;
+		font-size: 18px;
+	}
+}
+i,.btn-icon{
+	display: inline-block;
+	background-repeat: no-repeat;
+	vertical-align: middle;
+}
+.btn-icon{
+	background-image: url(../images/sys-icon_b547193.png);
+	margin-right: 4px;
+	height: 24px;
+	width: 20px;
+}
+.buttons{
+	background: url(../images/btn_2d148f3.png) no-repeat 0 -144px;
+	display: inline-block;
+	color: #666;
+	padding-left: 15px;
+	font-size: 12px;
+	height: 28px;
+	line-height: 28px;
+	position: relative;
+	.buttons-box{
+		 height: 28px;
+	   	 line-height: 28px;
+		padding-right: 15px;
+		background: url(../images/btn_2d148f3.png) no-repeat right -144px;
+		span{
+			text-align: center;
+		}
+	}
+	&.upload-box{
+		color:#fff;
+		padding-left: 25px;
+		background-position: 0 -645px;
+	}
+	&.upload-box .buttons-box{
+		background-position: right -645px;
+		padding-right: 25px;
+	}
+	&.device-box .buttons-box{
+		background-position: right -260px;
+		padding-right: 25px;
+	}
+}
+.box{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	right: 0px;
+	// border: 1px solid black;\
+	.main-box{
+			position: absolute;
+			top: 50px;
+			left: 210px;
+			bottom: 0;
+			right: 0;
+		.main{
+			height: 100%;
+			.left-head{
+				    height: 28px;
+				    line-height: 28px;
+				    padding: 11px 20px;
+				    position: relative;
+				    border-bottom: 1px solid #d2d2d2;
+				    background: #F7F7F7;
+				    .left-head-tool{
+				    	margin-right: 82px;
+				    	position: relative;
+				    	span{
+				    		display: inline-block;
+				    	}
+				    	#upload{
+				    		position: absolute;
+						opacity: 0;
+						top: 0;
+						left: 0;
+						width: 100%;
+						height: 100%;
+						cursor: pointer;
+				    	}
+				    	.upload{
+				    		background-position: 0 -2px;
+
+				    	}
+				    	.newfolder{
+				    		background-position: -150px -2px;
+				    	}
+				    	.download{
+				    		background-image: url(../images/plugin-icon_7318e47.png);
+				    		background-position: 0 -2px;
+				    	}
+				    	.device{
+				    		background-image: url(../images/plugin-icon_7318e47.png);
+				    		background-position: -60px -2px
+				    	}
+				    	.dropdown{
+				    		em{
+				    			display: inline-block;
+				    			width: 15px;
+				    			height: 100%;
+				    			border-left: 1px solid #fafafa;
+				    		}
+				    	}
+				    }	
+			}
+			.file-detail{
+				margin-left: 10px;
+				position: relative;
+				.file-total{
+					position: relative;
+					height: 30px;
+					line-height: 30px;
+					display: block;
+					padding-left: 10px;
+					#total{
+						float: right;
+						margin-right: 20px;
+					}
+
+				}
+				.file-tool{
+					position: relative;
+					z-index: 3;
+					height: 30px;
+					background: #f7f7f7;
+					padding-top: 13px;
+					span{
+						display: inline-block;
+					}
+					#allChecked{
+						position: absolute;
+						top: 22px;
+						left: 5px;
+					}
+					#fileToolBox{
+						padding-left: 25px;
+						display: none;
+						.btn-icon.delete{
+							background-position: -268px -2px;
+						}
+						#rename.disable{
+							color: #9ebdd9;
+						}
+					}
+				}
+				.folders{
+					.folder-box{
+						width: 142px;
+						// height: 122px;
+						float: left;
+						margin: 4px 4px 0 0;
+						text-align: center;
+						
+						.folder{
+							position: relative;
+							margin: 0 auto;
+							width: 90px;
+							height: 92px;
+							border: 2px solid #FFF;
+							background-repeat: no-repeat;
+							overflow: hidden;
+							 background:url(../images/gridIcon_7165cae.png) 16px -77px no-repeat;
+							 cursor: pointer;
+							 &.active{
+								border: 2px solid #2e80dc;
+								.checkbox{
+									display: block;
+								}
+							}
+							 .checkbox{
+							 	cursor: pointer;
+								background: url(../images/checkbox_8c741da.png) 6px -36px no-repeat;
+								position: absolute;
+								top: -8px;
+								left: -8px;
+								height: 30px;
+								width: 30px;
+								display: none;
+								&.checked{
+									// display: block;
+									background-position: -30px -36px;
+								}
+							 }
+						}
+						.folder-text{
+							width: 100%;
+							text-align: center;
+							margin-top: 10px;
+							a{
+								color: #000;
+								&:hover{
+									text-decoration: underline;
+								}
+							}
+						}
+						.rename-folder{
+							margin-top: 10px;
+							input{
+								width: 75px;
+								padding: 0;
+								
+							}
+							span{
+								display: inline-block;
+								width: 22px;
+								height: 22px;
+								line-height: 22px;
+								vertical-align: middle;
+								background-image: url(../images/btn_icon_17d92fd.gif);
+								background-repeat: no-repeat;
+								cursor: pointer;
+								&.sure{
+									background-position: -0px -512px;
+								}
+								&.cancel{
+									background-position: -27px -512px;
+								}
+							}
+						}
+					}
+				}
+				.tab{
+					background-color: #efefef;
+					.tab-head,.tab-body{
+						div{
+							display: table-cell;
+							padding: 10px;
+
+						}
+						div:nth-child(1){
+							width: 50%;
+						}
+					}
+				}
+			}
+		}
+	}
+}
