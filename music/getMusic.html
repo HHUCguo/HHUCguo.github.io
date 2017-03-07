@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<script src="music.js"></script>
+</head>
+<body>
+<input type="button" value="上一首">
+<input type="button" value="播放/暂停">
+<input type="button" value="停止">
+<input type="button" value="下一首">
+<input type="button" value="音量">
+<ul id="list">
+<!-- PHP输出 -->
+	<li title="不醉不会_田馥甄.mp3">不醉不会_田馥甄.mp3</li>
+	<li title="SHINee - Stand By Me.mp3">SHINee - Stand By Me.mp3</li>
+	<li title="Maroon 5-Sugar (2015年维多利亚的秘密泳装秀秀场音乐).mp3">Maroon 5-Sugar (2015年维多利亚的秘密泳装秀秀场音乐).mp3</li>
+	<li title="Nico（罗马尼亚）-Love Mail.mp3">Nico（罗马尼亚）-Love Mail.mp3</li>
+	<li title="陈势安-好爱好散.mp3">陈势安-好爱好散.mp3</li>
+</ul>
+<span id="nowTime">1</span>/<span id="totalTime">1</span>
+
+<canvas id="cans" width="700" height="400"></canvas>
+
+    <script>
+   
+   	var list = document.getElementById('list');
+   	var lis = list.getElementsByTagName('li');
+
+   	var cas = document.getElementById('cans');
+    	var now = document.getElementById('nowTime');
+    	var total = document.getElementById('totalTime');
+    	var btns = document.getElementsByTagName('input');
+
+    	var count = 0;
+    	var source = null;
+    	// var current = 0;
+    	var currentNum = 0;//当前播放歌曲的索引值
+
+    	btns[0].onclick = function(){ //上一首
+    		m.prev();
+    	}
+    	btns[1].onclick = function(){ //暂停/播放
+    		m.startPlay();
+    	}
+    	btns[3].onclick = function(){ //下一首
+    		m.next();
+    	}
+    	btns[4].onclick = function(){
+    		// m.voiceLev.gain.value =-1 ;  //控制音量
+    		m.voiceLev.gain.value -=0.2; 
+    		console.log(m.voiceLev.gain.value)
+    	}
+
+    	var m = new music(cas);
+
+   	for(var i = 0;i<lis.length;i++){
+   		lis[i].index = i;
+   		lis[i].onclick = function(){
+   			var file = lis[this.index].title;
+   			m.index = this.index;
+   			loadSongs(file);
+   		}
+   	}
+
+  
+	//通过AJAX获取音频数据
+    	// function loadSongs(url,callback){
+	function loadSongs(url){
+		var n = ++count;
+		// console.log(source)
+		source&&m.stopPlay();
+
+		if(m.index != currentNum){
+			console.log(6666);
+			m.current = 0;
+		}
+
+		var xhr = new XMLHttpRequest();
+
+		xhr.abort();//停止上一次的ajax请求
+		xhr.open('get','music/'+url,true);
+		// xhr.open('get','music',true);
+		
+		xhr.responseType = 'arraybuffer';     //网页可以识别的格式（二进制）
+
+		xhr.onload = function(){
+
+			if(n != count) return;  
+			m.ready(xhr.response,n);
+			// console.log(xhr.response)
+		}
+
+		xhr.send();
+	}
+
+	loadSongs(lis[0].title);
+	/*
+		3、波谱图换成方块画法（部分跳跃效果）
+		4、歌词同步（可以获取到播放进度了）
+		5、页面布局
+		6、分类页面如何获取数据（基于1）：创建不同文件夹
+
+		PS：简历
+		         项目整理
+		         面试知识点
+		
+
+	 */
+    </script>
+</body>
+</html>
