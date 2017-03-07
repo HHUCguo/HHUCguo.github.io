@@ -105,10 +105,7 @@ function startMove(obj,json,endFn){
 							obj[attr] = obj[attr] > 0?Math.ceil(obj[attr]) : Math.floor(obj[attr]);
 						}
 						obj.style[attr] =  iCur + obj[attr] + 'px';
-						
 					}
-					
-				
 			}
 		}
 		if(iOff){
@@ -117,5 +114,4 @@ function startMove(obj,json,endFn){
 		}
 		
 	},30);
-	
 }

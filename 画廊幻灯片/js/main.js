@@ -106,14 +106,9 @@ function createEles(n){
 					}
 				}
 				positionRandom();
-			}
-			
-			
+			}	
 		}
-		
-	
 }
-
 
 function positionRandom(){
 	
