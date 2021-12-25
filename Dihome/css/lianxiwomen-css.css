@@ -1,0 +1,172 @@
+*{
+	padding: 0;
+	margin: 0;
+	font-family:OPPOSans B, OPPOSans H, OPPOSans L, OPPOSans M, OPPOSans R;
+}
+
+a {
+	text-decoration: none;
+	outline: none;	
+	color: #ffffff;	
+}
+body{
+	overflow-x: hidden;
+}
+ul,li{
+	list-style: none;
+}
+.title_box{
+	width:100%;
+	height: 36px;
+    display: flex;
+	flex-direction:row;
+	position: absolute;
+	top:10px;
+	z-index: 2;
+}
+.title_logo{
+	width: 50%;
+	height: 40px;
+	float: left;
+}
+
+.title_cont{
+	width: 68%;
+	margin: auto;
+	padding-top:10px;
+}
+
+.banner{
+	width: 100%;
+	height: 320px;
+	background:url(../img/lianxiwomen_bg.png);
+	background-position: center;
+}
+
+
+.title_tab{
+	color: aliceblue;
+	width: 50%;
+	height: 40px;
+	float: right;
+}
+.title_tab ul{
+	display: flex;
+	flex-direction:row;
+	float: right;
+}
+.title_tab ul li{
+	width: 80px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.tab_li{
+	color:#21bfc2;
+	font-weight: bold;
+	border-bottom: solid 2px #21bfc2;
+}
+.title_tab ul li:hover{
+	color:#21bfc2;
+	border-bottom: solid 2px #21bfc2;
+	font-weight: bold;
+}
+.title_tab ul a:focus li{
+	color:#21bfc2;
+	font-weight: bold;
+	border-bottom: solid 2px #21bfc2;	
+}
+
+
+.lianxi{
+	width: 100%;
+	height: 720px;
+	text-indent:18px;
+	font-size: 16px;
+	color:#666666;
+	line-height: 28px;
+}
+
+.lianxi_text{
+	width: 100%;
+	text-align: center;
+	margin-top: 100px;
+}
+.text_title{
+	color:#333333;
+	font-size: 26px;
+}
+.text_in{
+	width: 100%;
+	height: 60px;
+	color:#999999;
+	font-size: 14px;
+	text-align: center;
+	margin-top: 20px;
+}
+
+.lianxi_contner{
+	width: 1024px;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+}
+
+.lianxi_us{
+	width: 400px;
+	height: 400px;
+	background: #F8F8F8;
+	border:1px solid #eeeeee;
+	padding: 50px;
+	line-height: 40px;
+}
+.hy_cold{
+	font-size: 28px;
+}
+.hy_tel{
+	font-size: 40px;
+	color:#21bfc2;
+}
+#lianxi_map{
+	width: 500px;
+	height: 500px;
+	border:1px solid #e5e5e5;
+}
+
+
+.footer{
+	width: 100%;
+	height: 520px;
+	background: #373c47;
+	padding-top: 80px;
+}
+.footer_tab{
+	width: 1024px;
+	height:460px;
+	margin: auto;
+	display: flex;
+	padding-left:60px;
+	justify-content:space-between;
+}
+
+.footer_tab ul{
+	width: 280px;
+	height: 360px;
+	color:#ccc;
+	font-size: 14px;
+}
+.footer_tab ul a{
+	color:#ccc;
+}
+.footer_tab ul li{
+    margin-top: 30px;
+}
+
+.footer_tab_til{
+	color:#fff;
+	font-size: 20px;
+}
+
+

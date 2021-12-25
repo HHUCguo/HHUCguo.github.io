@@ -1,0 +1,354 @@
+*{
+	padding: 0;
+	margin: 0;
+	font-family:OPPOSans B, OPPOSans H, OPPOSans L, OPPOSans M, OPPOSans R;
+}
+body{
+	overflow-x: hidden;
+}
+a {
+	text-decoration: none;
+	outline: none;	
+	color: #ffffff;	
+}
+
+ul,li{
+	list-style: none;
+}
+.title_box{
+	width:100%;
+	height: 36px;
+    display: flex;
+	flex-direction:row;
+	position: absolute;
+	top:10px;
+	z-index: 100;
+}
+.title_logo{
+	width: 50%;
+	height: 40px;
+	float: left;
+}
+
+.title_cont{
+    border-image-repeat: repeat;
+	width: 68%;
+	margin: auto;
+	padding-top:10px;
+}
+
+.banner{
+	width: 100%;
+	height: 620px;
+	background:url(../img/banner-bg.png);
+	background-position: center;
+}
+
+
+.title_tab{
+	color: aliceblue;
+	width: 50%;
+	height: 40px;
+	float: right;
+}
+.title_tab ul{
+	display: flex;
+	flex-direction:row;
+	float: right;
+}
+.tab_li{
+	color:#21bfc2;
+	font-weight: bold;
+	border-bottom: solid 2px #21bfc2;
+}
+.title_tab ul li{
+	width: 80px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.title_tab ul li:hover{
+	color:#21bfc2;
+	border-bottom: solid 2px #21bfc2;
+	font-weight: bold;
+}
+.title_tab ul a:focus li{
+	color:#21bfc2;
+	font-weight: bold;
+	border-bottom: solid 2px #21bfc2;	
+}
+.banner_frame{
+	width:100%;
+	overflow: hidden;
+	position: absolute;
+	top:120px;
+	z-index: 1;
+	margin: auto;
+	/*background:#FFAFB1;*/
+}
+.frame_box{
+    width: 1024px;
+	padding: 10px;
+	display: flex;
+	flex-direction: row;
+	margin: auto;
+}
+.frame_text{
+	color:#ffffff;
+	width:560px;
+	margin-top:72px;
+	transform:translateX(0px);
+    transition: all 1s ease;
+	/*background: #1C24C1;*/
+}
+.frame_box:hover .frame_text{ 
+	transform:translateX(60px);
+    transition: all 1s ease;
+}
+.line{
+	width: 60px;
+	height: 6px;
+	background: #21bfc2;
+	margin: 40px 0px 40px 0px;
+}
+.jiqi{
+	font-family: "阿里巴巴普惠体 B"," 阿里巴巴普惠体 H"," 阿里巴巴普惠体 L"," 阿里巴巴普惠体 M"," 阿里巴巴普惠体 R"," 等线 Light";
+	font-weight: lighter;
+	letter-spacing: 2px;
+	font-size:42px;
+	line-height: 52px;
+}
+.iot{
+	font-family: "阿里巴巴普惠体 B"," 阿里巴巴普惠体 H"," 阿里巴巴普惠体 L"," 阿里巴巴普惠体 M"," 阿里巴巴普惠体 R"," 等线 Light";
+	font-weight: lighter;
+	letter-spacing: 2px;
+	font-size:20px;
+	line-height: 20px;
+}
+.frame_img img{
+	width: 620px;
+	height: 620px;
+	transform:translateX(60px);
+    transition: all 1s ease;
+}
+.frame_box:hover .frame_img img{ 
+	transform:translateX(0px);
+    transition: all 1s ease;
+}
+.chanpin{
+	width: 100%;
+	height: 520px; 
+	background:#ffffff;	
+}
+.chanpin_text{
+	width: 100%;
+	text-align: center;
+	margin-top: 180px;
+}
+.text_title{
+	color:#333333;
+	font-size: 26px;
+}
+.text_in{
+	width: 100%;
+	height: 30px;
+	color:#999999;
+	font-size: 14px;
+	text-align: center;
+	margin-top: 30px;
+	letter-spacing: 1px;
+}
+.chanpin_cont{
+	width: 1024px;
+	margin: auto;
+	display: flex;	
+}
+.chanpin_cont ul{
+	width: 246px;
+	height: 280px;
+	margin: auto;
+	margin-top:50px;
+	transition: all 0.5s ease;
+}
+.chanpin_cont ul:hover{
+    box-shadow: 0px 0px 20px #e5e5e5;
+	border-radius: 4px;
+	transition: all 0.5s ease;
+}
+.chanpin_cont ul:hover .li_title{
+    color:#21c0c6;
+	font-size: 22px;
+	transition: all 0.5s ease;
+}
+.chanpin_cont ul:hover .li_text{
+    color:#21c0c6;
+	transition: all 0.5s ease;
+}
+.chanpin_cont ul li{text-align: center;margin: auto;margin-top: 30px;display: flex;justify-content: center;letter-spacing: 1px;}
+.chanpin_cont ul .li_title{font-size: 18px;color:#333333;transition: all 0.5s ease;}
+.chanpin_cont ul .li_text{font-size: 14px;color:#999999;transition: all 0.5s ease;}
+.youshi{width: 100%;height: 700px;background:#fbfbfb;padding-bottom: 100px;}
+.youshi_text{width: 100%;text-align: center;padding-top: 120px;margin-bottom: 40px;}
+.text_title{color:#333333;font-size: 26px;}
+.youshi_cont{width: 1024px;margin: auto;display: flex;}
+.youshi_cont ul{width: 236px;height:180px;margin: auto;margin-bottom: 20px;background: #FFFFFF;border-radius: 4px;transition: all 0.5s ease;}
+.youshi_cont ul:hover{box-shadow: 0px 0px 16px #e5e5e5;transition: all 0.5s ease;width: 246px;height:190px;color:#21c0c6;}
+.youshi_cont ul:hover .li_title{
+	transition: all 0.5s ease;
+	color:#21c0c6;
+	font-size: 22px;
+}
+.youshi_cont ul:hover .li_text{
+	transition: all 0.5s ease;
+	color:#21c0c6;
+}
+
+.youshi_cont ul li{
+	margin-top: 26px;
+	padding-left: 36px;
+	letter-spacing: 1px;
+}
+.youshi_cont ul .li_title{
+	font-size: 18px;
+	color:#333333;
+	transition: all 0.5s ease;
+}
+.youshi_cont ul .li_text{
+	font-size: 14px;
+	color:#999999;
+	transition: all 0.5s ease;
+}
+
+.hezuo{
+	width: 100%;
+	height: 560px;
+	background:#ffffff;	
+}
+.hezuo_text{
+	width: 100%;
+	text-align: center;
+	padding-top: 140px;	
+}
+.text_cn{
+	color:#333333;
+	font-size: 26px;
+}
+.text_en{
+	width: 100%;
+	height: 30px;
+	color:#999999;
+	font-size: 14px;
+	text-align: center;
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+
+
+.swiper_box{
+	width: 100%;
+	height: 200px;
+	margin: auto;
+	display: flex;
+    align-items: center;
+}
+
+.swiper-container{
+    width: 1024px;
+	height: 136px;
+	align-items: center;
+}
+.swiper-slide ul{
+	width: 800px;
+	height: 126px;
+	align-items: center;
+	margin: auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+.swiper-slide ul li{
+	width: 220px;
+	height: 106px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;	
+}
+.zixun{
+	width: 100%;
+	height: 480px;
+	background:#fbfbfb;	
+}
+.zixun_text{
+	width: 100%;
+	text-align: center;
+	padding-top: 140px;	
+}
+.zixun_til{
+	color:#333333;
+	font-size: 26px;
+	margin-bottom: 40px;
+	letter-spacing: 1px;
+}
+.zixun_til span{
+	color:#21c0c6;
+}
+.zixun_in{
+	width: 100%;
+	height: 30px;
+	color:#999999;
+	font-size: 14px;
+	text-align: center;
+	margin-bottom: 50px;
+	letter-spacing: 1px;
+}
+.zixun_btn{
+	width: 162px;
+	height:48px;
+	font-size: 16px;
+	border: 1px solid #21c0c6;
+	color:#21c0c6;
+	margin: auto;
+	line-height: 48px;
+	letter-spacing: 1px;
+	transition: all 0.8s ease;
+}
+.zixun_btn:hover{
+	background: #21c0c6;
+	color:#ffffff;
+	transition: all 0.8s ease;
+}
+
+.footer{
+	width: 100%;
+	height: 520px;
+	background: #373c47;
+	padding-top: 40px;
+}
+.footer_tab{
+	width: 1024px;
+	height:460px;
+	margin: auto;
+	display: flex;
+	justify-content:space-between;
+}
+.footer_tab ul{
+	width: 280px;
+	height: 360px;
+	color:#ccc;
+	font-size: 14px;
+}
+.footer_tab ul li{
+    margin-top: 30px;
+}
+.footer_tab ul a{
+	color:#ccc;
+}
+.footer_tab_til{
+	color:#fff;
+	font-size: 20px;
+}
+
+
