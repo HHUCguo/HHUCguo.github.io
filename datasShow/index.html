@@ -1,0 +1,83 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数据展示</title>
+</head>
+
+<body>
+    <div id="app">
+        <div @click="getDatas">{{message}}</div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script src="http://cdn.suoluomei.com/common/js2.0/axios/axios.min.js"></script>
+<script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            message: 'Hello Vue!',
+            OKAYAPI_APP_KEY: 'E672704D1B22AA27ACEEF8D91623BDAE',
+            OKAYAPI_APP_SECRECT: 'ZATqsAvou2UtSkanPmvDRNO6N1P5u3S8Tnit2F7xL4pTrqbblI37R58zhVOYsG3d1xUkhl'
+        },
+        methods: {
+            // 公共参数与接口的拼接
+            validateUrl(apiName, params) {
+                let SIGN = this.enryptData(apiName, params)
+                let url = 'http://hn216.api.yesapi.cn/?s=' + apiName + '&app_key=' + this.OKAYAPI_APP_KEY + '&sign=' + SIGN
+                return url
+            },
+
+            // 小白官方生成动态签名的方法
+            enryptData(apiName, params) {
+                params['app_key'] = this.OKAYAPI_APP_KEY
+                params['s'] = apiName
+                params['sign'] = '' // 屏蔽sign参数
+                // console.log(params)
+                // 按字典顺序对参数排序
+                let sdic = Object.keys(params).sort()
+                let paramsStrExceptSign = ''
+                for (let ki in sdic) {
+                    paramsStrExceptSign += params[sdic[ki]]
+                }
+
+                let SIGN = md5(paramsStrExceptSign + this.OKAYAPI_APP_SECRECT).toUpperCase()
+
+                return SIGN
+            },
+            getDatas() {
+                let pass = md5('666666')
+                let url = this.validateUrl('App.User.Login', {
+                    username: 'superadmin',
+                    password: pass
+                })
+                console.log(url)
+                axios.post(url, {
+                    username: 'superadmin',
+                    password: pass
+                }).then((res)=> {
+                    //成功的回调
+                    console.log(res)
+                }).catch((error)=> {
+                    //失败的回调
+                    console.log(error)
+                });
+            },
+            uploadDatas() {
+                axios.post('http://php.com', {
+                    aa: '11',
+                    bb: '22'
+                }).then(function (res) {
+                    console.log(res);
+                }).catch(function (error) {
+                    console.log(error);
+                });
+            }
+        }
+    })
+</script>
+
+</html>
